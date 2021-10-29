@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/report.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <title>Gig for Geeks</title>
+</head>
+<body>
+  <header>
+    <a href="/">
+      <img src="static/image/gig_for_geek_contrast.png" />
+      <h1>gig for geeks</h1>
+    </a>
+    <form action="/report" method="get">
+      <input type="text" name="word" placeholder="{{word}}" />
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </header>
+  <main>
+    <article>
+      <div class="job-info">
+        <h2>
+        {{len_jobs}} {{word}} gigs for you!
+        </h2>
+        <buttons>
+          <form action="/" method="get">
+            <button type="submit">
+              <i class="fas fa-arrow-left"></i>
+              <i class="fas fa-home"></i>
+            </button>
+          </form>
+          <a href="/export?word={{word}}">
+            <button type="submit">
+              <i class="fas fa-arrow-down"></i>
+              <span>Download CSV</span>
+          </button>
+          </form>
+        </buttons>
+      </div>
+      <ul>
+        {% for job in jobs %}
+          <li class="job-list">
+            <a href="{{job.link}}" target="_blank">
+              <div class="first-row">
+                <span class="job-title">{{job.title}}</span>
+                <div class="job-row">
+                  <span class="job-company">{{job.company}}</span>
+                  <span class="job-region">{{job.region}}</span>
+                </div>
+              </div>
+              <div class="second-row">
+                <button type="submit">Apply</button>
+              </div>
+            </a>
+          </li>
+          <hr>
+        {% endfor %}
+      </ul>
+    </article>
+    <footer>
+      <div class="copyright">ⓒ 2021 @nanunzoey</div>
+    </footer>
+  </main>
+</body>
+</html>

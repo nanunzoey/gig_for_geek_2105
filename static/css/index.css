@@ -1,40 +1,82 @@
-:root {
-  --main-color: #3ee3d3;
-  --sub-color: #3ee3b3;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Exo 2", sans-serif;
-}
+@import "styles.css";
 
 body {
-  width: 100vw;
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#main-img {
-  width: 300px;
-  height: 300px;
+header {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title-first {
+header a {
   color: var(--main-color);
+  text-decoration: none;
+}
+
+#img-main {
+  width: 400px;
+  height: 400px;
+}
+
+h1 {
   font-size: 60px;
   font-weight: 900;
+  margin-top: 0;
   margin-bottom: 50px;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.1);
 }
 
-button:hover {
-  cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+#represented {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+h3 {
+  color: var(--main-grey);
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 60px;
+  padding: 10px;
+  font-size: 20px;
+  border: var(--main-border);
+  border-radius: 5px;
+}
+
+input:hover, button:hover {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
 input {
-  padding: 20px;
+  padding: 10px;
   font-size: 20px;
+  width: 500px;
+  border: var(--main-border);
+  border-radius: 5px;
 }
+
+
+.img-box {
+  display: flex;
+}
+
+.img-jobsite {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+

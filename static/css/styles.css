@@ -1,0 +1,39 @@
+:root {
+  --main-color: #3ee3d3;
+  --sub-color: #3ee3b3;
+  --main-shadow: #aff0dd;
+  --main-grey: rgba(0,0,0,0.5);
+  --main-border: 1px solid rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 1000px;
+  margin: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: var(--main-grey);
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+footer .copyright {
+  color: var(--main-grey);
+  font-size: 15px;
+}
