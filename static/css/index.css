@@ -1,0 +1,40 @@
+:root {
+  --main-color: #3ee3d3;
+  --sub-color: #3ee3b3;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-img {
+  width: 300px;
+  height: 300px;
+}
+
+.title-first {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  padding: 20px;
+  font-size: 20px;
+}

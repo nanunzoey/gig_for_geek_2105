@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+  <title>Gig for Geeks</title>
+</head>
+<body>
+    <img id="main-img" src="https://image.freepik.com/free-vector/digital-nomad-mountains_67419-21.jpg"/>
+    <div class="title-first">gig for geeks</div>
+    <form action="/report">
+      <input type="text" placeholder="Whatever the geek want" required/>
+      <button type="submit">Search</button>
+    </form>
+</body>
+</html>
